@@ -10,9 +10,9 @@ class Skalausaha extends CI_Controller {
         parent :: __construct();
         $this->load->model('M_skalausaha','ska',true); // kec itu alias dari kecamatan
     }
-
     public function index()
     {
+        //ini perubahan
     	$this->judul['aktip'] = "skala";
 //    	var_dump($this->judul);die;
         $data['dataskalausaha'] = $this->ska->readall();
