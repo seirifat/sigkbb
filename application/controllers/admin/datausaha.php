@@ -9,6 +9,7 @@ class Datausaha extends CI_Controller {
 
 	public function index()
 	{
+		//Ini Index
 		//$this->load->view('admin/login');
         echo "ini kecamatan";
 	}
