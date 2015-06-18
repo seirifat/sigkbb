@@ -7,28 +7,28 @@
 
                 <div class="form-group">
                     <label for="">Nama User</label>
-                    <input type="text" class="form-control" name="nama_user" id="" placeholder="Nama user">
+                    <input type="text" class="form-control" name="nama_user" id="" placeholder="Nama user" required="required">
                 </div>
                 <div class="form-group">
                     <label for="">Email</label>
-                    <input type="text" class="form-control" name="email_user" id="" placeholder="Email">
+                    <input type="email" class="form-control" name="email_user" id="" placeholder="Email" required="required">
                 </div>
                 <div class="form-group">
                     <label for="">Alamat</label>
-                    <textarea class="form-control" name="alamat_user" id="" placeholder="Alamat"></textarea>
+                    <textarea class="form-control" name="alamat_user" id="" placeholder="Alamat" rows="7" style="resize: none;"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="">Password</label>
-                    <input type="text" class="form-control" name="password_user" id="" placeholder="Password">
+                    <input type="text" class="form-control" name="password_user" id="" placeholder="Password" required="required">
                 </div>
                 <div class="form-group">
                     <label for="">Tempat Lahir</label>
-                    <input type="text" class="form-control"  name="tempat" placeholder="Tempat Lahir">
+                    <input type="text" class="form-control"  name="tempat" placeholder="Tempat Lahir" required="required">
                 </div>
                 <div class="form-group">
                     <label for="">Tanggal Lahir</label>
                     <div class="input-group date" id="datetimepicker1">
-                    <input type="text" class="form-control" name="tgl_lahir" >
+                    <input type="text" class="form-control" name="tgl_lahir" id="datepicker" required="required">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
                     </div>
                 </div>
@@ -52,15 +52,11 @@
 	</div></div>
 </div>
 
-
 <script>
-    $(function(){
-        $('#datetimepicker1').datetimepicker();
-    });
-</script>
-//    $('input#datepicker').click(function(){
-//        alert('hey');
-//    });
-
+	$(function() {
+		$( "#datepicker" ).datepicker({
+			dateFormat: "dd-mm-yy"
+		});			
+	});
 </script>
 
