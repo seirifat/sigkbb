@@ -2,6 +2,10 @@
 
 class Datausaha extends CI_Controller {
 
+	private $judul=array(
+		'aktip' => ""
+		);
+
     public function __construct()
     {
         parent :: __construct();
@@ -9,9 +13,10 @@ class Datausaha extends CI_Controller {
 
 	public function index()
 	{
-		//Ini Index
-		//$this->load->view('admin/login');
-        echo "ini kecamatan";
+		$this->judul['aktip'] = "datausaha";
+		$this->load->view('admin/components/header',$this->judul);
+		$this->load->view('admin/datausaha');
+		$this->load->view('admin/components/footer');
 	}
 	public function add()
 	{
