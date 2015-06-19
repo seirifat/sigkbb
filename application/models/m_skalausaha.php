@@ -24,15 +24,13 @@ class M_skalausaha extends CI_Model {
     {
         $this->db->select('*');
         $this->db->from('skala_usaha');
-        $this->db->where('id_skala',$id);
+        $this->db->where('id_skalausaha',$id);
         $data = $this->db->get()->row();
         return $data;
     }
     public function edit($id,$dataska)
     {
-        //update kecamatan set nama=batujajar where id_kecamatan=$id
-        //                     dalem $datakec
-        $this->db->where('id_skala',$id);
+        $this->db->where('id_skalausaha',$id);
         $this->db->update('skala_usaha',$dataska);
         if($this->db->affected_rows()>0){
             return true;
@@ -42,7 +40,7 @@ class M_skalausaha extends CI_Model {
     }
     public function delete($id)
     {
-        $this->db->where('id_skala',$id);
+        $this->db->where('id_skalausaha',$id);
         $this->db->delete('skala_usaha');
         if($this->db->affected_rows()>0){
             return true;

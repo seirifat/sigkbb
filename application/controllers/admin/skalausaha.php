@@ -12,10 +12,9 @@ class Skalausaha extends CI_Controller {
     }
     public function index()
     {
-        //ini perubahan
     	$this->judul['aktip'] = "skala";
-//    	var_dump($this->judul);die;
         $data['dataskalausaha'] = $this->ska->readall();
+//    	var_dump($data);die;
         $this->load->view('admin/components/header',$this->judul);
         $this->load->view('admin/skalausaha',$data);
         $this->load->view('admin/components/footer');
@@ -57,10 +56,11 @@ class Skalausaha extends CI_Controller {
     }
     public function editview($id)
     {
+        $this->judul['aktip'] = "skala";
         $data['edit'] = true;
         $dataSkalausaha = $this->ska->selectById($id);
         $data['skalausaha'] =  $dataSkalausaha; //edit nanti dijadikan variabel di view
-        $this->load->view('admin/components€/header');
+        $this->load->view('admin/components/header',$this->judul);
         $this->load->view('admin/skalausaha_add',$data);
         $this->load->view('admin/components/footer');
     }

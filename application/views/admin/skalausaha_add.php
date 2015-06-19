@@ -2,13 +2,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 col-md-offset-3">
-                <form action="<?php echo !empty($edit)? base_url('admin/sektorusaha/edit/'.$sektorusaha->id_sektor): base_url('admin/sektorusaha/add'); ?>" method="post" role="form">
-                    <legend><?php echo !empty($edit)?"Edit Sektor Usaha":"Add Sektor Usaha";?></legend>
+                <form action="<?php echo !empty($edit)? base_url('admin/skalausaha/edit/'.$skalausaha->id_skalausaha): base_url('admin/skalausaha/add'); ?>" method="post" role="form">
+                    <legend><?php echo !empty($edit)?"Edit Skala Usaha":"Add Skala Usaha";?></legend>
 
                     <div class="form-group">
-                        <label for="">Nama Sektor Usaha</label>
-                        <input type="text" class="form-control" name="nama_sektor" id="" placeholder="Nama Sektor" required
-                               value="<?php echo !empty($sektorusaha)?$sektorusaha->nama_sektor:''?>">
+                        <label for="">Nama Skala Usaha</label>
+                        <input type="text" class="form-control" name="nama_skalausaha" id="" placeholder="Nama Skala Usaha" required
+                               value="<?php echo !empty($skalausaha)?$skalausaha->nama_skalausaha:''?>">
                     </div>
                     <div class="form-group text-right">
                         <button type="submit" class="btn btn-primary">Simpan</button>

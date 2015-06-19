@@ -46,7 +46,7 @@
                                         <th class="text-center">Tempat Lahir </th>
                                         <th class="text-center">Tanggal Lahir </th>
                                         <th class="text-center">KTP </th>
-                                        <th class="text-center">Status User </th>
+                                        <th class="text-center">Status </th>
                                         <th class="text-center">Aksi</th>
                                     </tr>
                             </thead>

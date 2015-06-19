@@ -176,6 +176,9 @@
                 <li <?php echo $aktip=='sektor'?'class="active"':"";?> >
                     <a href="<?php echo base_url('admin/sektorusaha/'); ?>"><i class="fa fa-fw fa-bar-chart-o"></i>Sektor Usaha</a>
                 </li>
+                <li <?php echo $aktip=='skala'?'class="active"':"";?> >
+                    <a href="<?php echo base_url('admin/skalausaha/'); ?>"><i class="fa fa-fw fa-bar-chart-o"></i>Skala Usaha</a>
+                </li>
                 <li <?php echo $aktip=='user'?'class="active"':"";?>>
                     <a  href="<?php echo base_url('admin/user/'); ?>"><i class="fa fa-fw fa-user"></i>Pemilik Usaha</a>
                 </li>

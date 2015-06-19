@@ -57,10 +57,11 @@ class Sektorusaha extends CI_Controller {
     }
     public function editview($id)
     {
+        $this->judul['aktip'] = "sektor";
         $data['edit'] = true;
         $dataSektorusaha = $this->sek->selectById($id);
         $data['sektorusaha'] =  $dataSektorusaha; //edit nanti dijadikan variabel di view
-        $this->load->view('admin/components/header');
+        $this->load->view('admin/components/header',$this->judul);
         $this->load->view('admin/sektorusaha_add',$data);
         $this->load->view('admin/components/footer');
     }

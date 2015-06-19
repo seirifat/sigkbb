@@ -83,10 +83,11 @@ class Kecamatan extends CI_Controller {
 	}
     public function editview($id)
     {
+        $this->judul['aktip'] = "kecamatan";
         $data['edit'] = true;
         $dataKecamatan = $this->kec->selectById($id);
         $data['kecamatan'] =  $dataKecamatan; //edit nanti dijadikan variabel di view
-        $this->load->view('admin/components/header');
+        $this->load->view('admin/components/header',$this->judul);
         $this->load->view('admin/kecamatan_add',$data);
         $this->load->view('admin/components/footer');
     }

@@ -83,10 +83,11 @@ class User extends CI_Controller {
     }
     public function editview($id)
     {
+        $this->judul['aktip'] = "user";
         $data['edit'] = true;
         $dataUser = $this->us->selectById($id);
         $data['user'] =  $dataUser; //edit nanti dijadikan variabel di view
-        $this->load->view('admin/components/header');
+        $this->load->view('admin/components/header',$this->judul);
         $this->load->view('admin/user_add',$data);
         $this->load->view('admin/components/footer');
     }

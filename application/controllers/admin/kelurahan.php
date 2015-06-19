@@ -61,11 +61,12 @@ class Kelurahan extends CI_Controller {
     }
     public function editview($id)
     {
+        $this->judul['aktip'] = "kelurahan";
         $data['kecamatan'] = $this->kel->getkecamatan();
         $data['edit'] = true;
         $dataKelurahan = $this->kel->selectById($id);
         $data['kelurahan'] =  $dataKelurahan; //edit nanti dijadikan variabel di view
-        $this->load->view('admin/components/header');
+        $this->load->view('admin/components/header',$this->judul);
         $this->load->view('admin/kelurahan_add',$data);
         $this->load->view('admin/components/footer');
     }
