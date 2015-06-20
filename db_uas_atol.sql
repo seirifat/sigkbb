@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2015 at 11:58 PM
+-- Generation Time: Jun 20, 2015 at 08:40 AM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -29,10 +29,10 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `data_usaha` (
 `id_usaha` int(10) NOT NULL,
   `id_user` int(10) NOT NULL,
+  `id_kecamatan` int(10) NOT NULL,
   `id_kelurahan` int(10) NOT NULL,
   `id_sektor` int(10) NOT NULL,
   `id_skalausaha` int(10) NOT NULL,
-  `id_foto` int(10) NOT NULL,
   `nama_usaha` varchar(20) NOT NULL,
   `produk` varchar(20) NOT NULL,
   `alamat_usaha` varchar(50) NOT NULL,
@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS `data_usaha` (
 
 CREATE TABLE IF NOT EXISTS `foto_usaha` (
 `id_foto` int(10) NOT NULL,
+  `id_usaha` int(10) NOT NULL,
   `foto` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -336,14 +337,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   `tgl_lahir` date NOT NULL,
   `file_ktp` varchar(50) NOT NULL,
   `status_user` enum('admin','pemilik_usaha') NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id_user`, `nama_user`, `email_user`, `alamat_user`, `password`, `tempat`, `tgl_lahir`, `file_ktp`, `status_user`) VALUES
-(1, 'Imam Nur Arifin', 'imam.12ra.kkpi@gmail.com', 'Tubagus ismail dalam no.40', 'ganteng', 'Sukabumi', '2015-02-16', '', 'pemilik_usaha');
+(1, 'Imam Nur Arifin', 'imam.12ra.kkpi@gmail.com', 'Tubagus ismail dalam no.40', 'ganteng', 'Sukabumi', '2015-02-16', '', 'pemilik_usaha'),
+(2, 'Mamenz', 'fairplay_ina@yahoo.co.id', 'Tubagus raya', '0', 'Sukabumi', '0000-00-00', '0', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -353,13 +355,13 @@ INSERT INTO `user` (`id_user`, `nama_user`, `email_user`, `alamat_user`, `passwo
 -- Indexes for table `data_usaha`
 --
 ALTER TABLE `data_usaha`
- ADD PRIMARY KEY (`id_usaha`), ADD KEY `id_user` (`id_user`), ADD KEY `id_kelurahan` (`id_kelurahan`), ADD KEY `id_sektor` (`id_sektor`), ADD KEY `id_foto` (`id_foto`);
+ ADD PRIMARY KEY (`id_usaha`), ADD KEY `id_user` (`id_user`), ADD KEY `id_kelurahan` (`id_kelurahan`), ADD KEY `id_sektor` (`id_sektor`);
 
 --
 -- Indexes for table `foto_usaha`
 --
 ALTER TABLE `foto_usaha`
- ADD PRIMARY KEY (`id_foto`);
+ ADD PRIMARY KEY (`id_foto`), ADD KEY `id_usaha` (`id_usaha`);
 
 --
 -- Indexes for table `kecamatan`
@@ -429,7 +431,7 @@ MODIFY `id_skalausaha` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --
@@ -440,8 +442,13 @@ MODIFY `id_user` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 ALTER TABLE `data_usaha`
 ADD CONSTRAINT `data_usaha_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`),
 ADD CONSTRAINT `data_usaha_ibfk_2` FOREIGN KEY (`id_kelurahan`) REFERENCES `kelurahan` (`id_kelurahan`),
-ADD CONSTRAINT `data_usaha_ibfk_3` FOREIGN KEY (`id_sektor`) REFERENCES `sektor_usaha` (`id_sektor`),
-ADD CONSTRAINT `data_usaha_ibfk_4` FOREIGN KEY (`id_foto`) REFERENCES `foto_usaha` (`id_foto`);
+ADD CONSTRAINT `data_usaha_ibfk_3` FOREIGN KEY (`id_sektor`) REFERENCES `sektor_usaha` (`id_sektor`);
+
+--
+-- Constraints for table `foto_usaha`
+--
+ALTER TABLE `foto_usaha`
+ADD CONSTRAINT `foto_usaha_ibfk_1` FOREIGN KEY (`id_usaha`) REFERENCES `data_usaha` (`id_usaha`);
 
 --
 -- Constraints for table `kelurahan`

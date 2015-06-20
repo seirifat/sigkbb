@@ -31,6 +31,7 @@
                 <div class="form-group">
                     <label for="">Sektor Usaha</label>
                     <select name="id_sektor" id="inputID" class="form-control">
+                        <option value="" disabled selected> -- Pilih Sektor Usaha--</option>
                         <?php foreach($sektorusaha as $row):?>
                             <option value="<?php echo $row->id_sektor;?>"><?php echo $row->nama_sektor;?></option>
                         <?php endforeach;?>
@@ -39,6 +40,7 @@
                 <div class="form-group">
                     <label for="">Skala Usaha</label>
                     <select name="id_skalausahan" id="inputID" class="form-control">
+                        <option value="" disabled selected> -- Pilih Sakal Usaha --</option>
                         <?php foreach($skalausaha as $row):?>
                             <option value="<?php echo $row->id_skalausaha;?>"><?php echo $row->nama_skalausaha;?></option>
                         <?php endforeach;?>

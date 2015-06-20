@@ -9,9 +9,11 @@ class Datausaha extends CI_Controller {
     {
         parent :: __construct();
         $this->load->library('pagination');
-        $this->load->model('M_datausaha','usa',true); // kec itu alias dari kecamatan
-        $this->load->model('M_kecamatan','kec',true); // kec itu alias dari kecamatan
-        $this->load->model('M_kelurahan','kel',true); // kec itu alias dari kecamatan
+        $this->load->model('M_datausaha','usa',true); // usa itu nama alias dar model datausaha
+        $this->load->model('M_kecamatan','kec',true); // kec itu nama alias dar model kecamatan
+        $this->load->model('M_kelurahan','kel',true); // kel itu nama alias dar model kelurahan
+        $this->load->model('M_sektorusaha','sek',true); // sek itu nama alias dar model sektorusaha
+        $this->load->model('M_skalausaha','ska',true); // ska itu nama alias dar model skalusaha
     }
 
     public function index($offset = 0)
@@ -64,6 +66,8 @@ class Datausaha extends CI_Controller {
     public function addview()
     {
         $this->judul['aktip'] = "datausaha";
+        $data['sektorusaha'] = $this->sek->readall();
+        $data['skalausaha'] = $this->ska->readall();
         $data['kecamatan'] = $this->kec->readall();
         $this->load->view('admin/components/header',$this->judul);
         $this->load->view('admin/datausaha_add',$data);
@@ -96,6 +100,7 @@ class Datausaha extends CI_Controller {
     }
     public function editview($id)
     {
+
         $this->judul['aktip'] = "datausaha";
         $data['edit'] = true;
         $dataUsaha = $this->usa->selectById($id);
