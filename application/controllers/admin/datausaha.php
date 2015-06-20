@@ -10,6 +10,8 @@ class Datausaha extends CI_Controller {
         parent :: __construct();
         $this->load->library('pagination');
         $this->load->model('M_datausaha','usa',true); // kec itu alias dari kecamatan
+        $this->load->model('M_kecamatan','kec',true); // kec itu alias dari kecamatan
+        $this->load->model('M_kelurahan','kel',true); // kec itu alias dari kecamatan
     }
 
     public function index($offset = 0)
@@ -62,10 +64,21 @@ class Datausaha extends CI_Controller {
     public function addview()
     {
         $this->judul['aktip'] = "datausaha";
+        $data['kecamatan'] = $this->kec->readall();
         $this->load->view('admin/components/header',$this->judul);
-        $this->load->view('admin/datausaha_add');
+        $this->load->view('admin/datausaha_add',$data);
         $this->load->view('admin/components/footer');
     }
+    
+    
+    public function getKelurahanByIdKecamatan()
+    {
+    	$id_kec = $this->input->post("id_kec");
+        $kel = $this->kel->getKelurahanByIdKecamatan($id_kec);
+        echo json_encode($kel);
+    }
+    
+    
 
     public function edit($id)
     {

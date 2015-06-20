@@ -7,7 +7,7 @@
 
                 <div class="form-group">
                     <label for="">Nama User</label>
-                    <input type="text" class="form-control" name="nama_user" id="" placeholder="Nama user" required="required">
+                    <input type="text" class="form-control" name="nama_user" id="nama_user" placeholder="Nama user" required="required">
                 </div>
                 <div class="form-group">
                     <label for="">Email</label>

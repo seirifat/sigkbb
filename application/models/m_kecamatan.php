@@ -11,6 +11,7 @@ class M_kecamatan extends CI_Model {
         $data = $this->db->get()->result();
         return $data;
     }
+    
 
     public function readall_paging($limit = array())
     {

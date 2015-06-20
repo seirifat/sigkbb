@@ -20,6 +20,19 @@ class M_kelurahan extends CI_Model {
         $data = $this->db->get()->result();
         return $data;
     }
+    
+    
+
+    public function getKelurahanByIdKecamatan($idKec = 0)
+    {
+        $this->db->select('*');
+        $this->db->from('kelurahan');
+        $this->db->where('id_kecamatan',$idKec);
+        $data = $this->db->get()->result();
+        return $data;
+    }
+    
+    
 
 
     public function add($datakel)
