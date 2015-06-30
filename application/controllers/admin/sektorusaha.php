@@ -83,6 +83,7 @@ class Sektorusaha extends CI_Controller {
         //$this->load->view('admin/login');
         echo "ini tambah kecamatan";
     }
+
 }
 
 /* End of file welcome.php */

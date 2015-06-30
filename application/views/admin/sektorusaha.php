@@ -49,7 +49,7 @@
                                   <?php foreach($datasektorusaha as $row){?>
                                       <tr>
                                           <td class="text-center"><?php echo $i;?></td>
-                                          <td><?php echo $row->nama_sektor;?></td>
+                                          <td class="text-center"><?php echo $row->nama_sektor;?></td>
                                           <td class="text-center"><a href="<?php echo base_url('admin/sektorusaha/editview/'.$row->id_sektor);?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
                                               <a onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?')" href="<?php echo base_url('admin/sektorusaha/delete/'.$row->id_sektor); ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
                                       </tr>
@@ -59,7 +59,6 @@
                               </table>
                     	  </div>
                     </div>
-
                     </div>
                 </div>
             </div>

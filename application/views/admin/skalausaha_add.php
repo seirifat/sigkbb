@@ -1,9 +1,9 @@
-<div id="page-wrapper" >r
+<div id="page-wrapper" >
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 col-md-offset-3">
+            <div class="col-md-4">
                 <form action="<?php echo !empty($edit)? base_url('admin/skalausaha/edit/'.$skalausaha->id_skalausaha): base_url('admin/skalausaha/add'); ?>" method="post" role="form">
-                    <legend><?php echo !empty($edit)?"Edit Skala Usaha":"Add Skala Usaha";?></legend>
+                    <legend><?php echo !empty($edit)?"Edit Skala Usaha":"Tambah Skala Usaha";?></legend>
 
                     <div class="form-group">
                         <label for="">Nama Skala Usaha</label>

@@ -38,7 +38,7 @@
 |
 */
 
-$route['default_controller'] = "welcome";
+$route['default_controller'] = "paging";
 $route['admin'] = "admin/login";
 $route['404_override'] = '';
 $route['admin/kecamatan/index/(:num)'] = "admin/kecamatan/index/$1";

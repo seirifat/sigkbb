@@ -115,6 +115,15 @@ class User extends CI_Controller {
         //$this->load->view('admin/login');
         echo "ini tambah kecamatan";
     }
+    public function detilview()
+    {
+        $this->judul['aktip'] = "user";
+        $datauser = $this->us->selectById($id);
+        $data['user'] = $datauser;
+        $this->load->view('admin/components/header',$this->judul);
+        $this->load->view('admin/userdetil',$data);
+        $this->load->view('admin/components/footer');
+    }
 }
 
 /* End of file welcome.php */

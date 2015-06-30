@@ -2,9 +2,9 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-4 col-md-offset-3">
+            <div class="col-md-4">
                 <form action="<?php echo !empty($edit)? base_url('admin/sektorusaha/edit/'.$sektorusaha->id_sektor): base_url('admin/sektorusaha/add'); ?>" method="post" role="form">
-                    <legend><?php echo !empty($edit)?"Edit Sektor Usaha":"Add Sektor Usaha";?></legend>
+                    <legend><?php echo !empty($edit)?"Edit Sektor Usaha":"Tambah Sektor Usaha";?></legend>
 
                     <div class="form-group">
                         <label for="">Nama Sektor Usaha</label>
@@ -14,6 +14,13 @@
                     <div class="form-group text-right">
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <br>
                     <br>
                     <br>
