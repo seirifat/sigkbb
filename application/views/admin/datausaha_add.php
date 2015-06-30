@@ -1,14 +1,22 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../jquery.geocomplete.js"></script>
+<script>
+    $(function(){
+        $("#geocomplete").geocomplete()
+    });
+
+</script>
+
 <div id="page-wrapper" >
 <div class="container-fluid">
     <div class="row">
         
             <form action="<?php echo !empty($edit)? base_url('admin/datausaha/edit/'.$datausaha->id_usaha): base_url('admin/datausaha/add'); ?>" method="post" role="form">
-                <legend><?php echo !empty($edit)?"Edit Data Usaha":"Add Data Usaha";?></legend>
+                <legend><?php echo !empty($edit)?"Edit Data Usaha":"Tambah Data Usaha";?></legend>
 		<div class="col-md-3">		
                 <div class="form-group">
                     <label for="">Nama Usaha</label>
-                    <input type="text" class="form-control" name="nama_usaha" id="" placeholder="Nama Usaha" required
-                           value="<?php echo !empty($datausaha)?$datausaha->nama_usaha:''?>">
+                    <input type="text" class="form-control" name="nama_usaha" id="" placeholder="Nama Usaha" required value="<?php echo !empty($datausaha)?$datausaha->nama_usaha:''?>">
                 </div>
                 <div class="form-group">
                     <label for="">Kecamatan</label>
@@ -48,22 +56,8 @@
                 </div>
                 <div class="form-group">
                     <label for="">Omzet</label>
-                    <input type="text" class="form-control" name="omzet" id="" placeholder="Omzet" required
-                           value="<?php echo !empty($datausaha)?$datausaha->omzet:''?>">
+                    <input type="text" class="form-control" name="omzet" id="" placeholder="Omzet" required value="Rp. <?php echo !empty($datausaha)?$datausaha->omzet:''?>">
                 </div>
-                
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
         </div>
         <div class="col-md-3">
                 <div class="form-group">
@@ -83,33 +77,17 @@
                 <div class="form-group">
                     <label for="">Latitude</label>
                     <input type="text" class="form-control" name="latitude" id="" placeholder="Latitude" required
-                           value="<?php echo !empty($datausaha)?$datausaha->latitude:''?>">
+                           value="<?php echo !empty($datausaha)?$datausaha->latitude:''?>" disabled>
                 </div>
                 <div class="form-group">
                     <label for="">Longitude</label>
                     <input type="text" class="form-control" name="longitude" id="" placeholder="Longitude" required
-                           value="<?php echo !empty($datausaha)?$datausaha->longitude:''?>">
+                           value="<?php echo !empty($datausaha)?$datausaha->longitude:''?>" disabled>
                 </div>
-                <div class="form-group text-right" style="margin-top: 40px">
-                    <button type="submit" class="btn btn-primary btn-block">Simpan</button>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-        </div>
-        <div class="col-md-6">
         </div>
          </form>
-    </div></div>
+    </div>
+</div>
 </div>
 
 <script>
@@ -127,7 +105,8 @@
 				  //console.log(data[i].nama_kelurahan);
 				  $('#id_kelurahan').append("<option value='"+data[i].id_kelurahan+"'>"+data[i].nama_kelurahan+"</option>");
 				}
-			}),
+			})
 		});
 	});
+
 </script>

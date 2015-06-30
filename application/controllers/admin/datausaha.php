@@ -10,10 +10,10 @@ class Datausaha extends CI_Controller {
         parent :: __construct();
         $this->load->library('pagination');
         $this->load->model('M_datausaha','usa',true); // usa itu nama alias dar model datausaha
-        $this->load->model('M_kecamatan','kec',true); // kec itu nama alias dar model kecamatan
-        $this->load->model('M_kelurahan','kel',true); // kel itu nama alias dar model kelurahan
-        $this->load->model('M_sektorusaha','sek',true); // sek itu nama alias dar model sektorusaha
-        $this->load->model('M_skalausaha','ska',true); // ska itu nama alias dar model skalusaha
+        $this->load->model('M_kecamatan','kec',true);
+        $this->load->model('M_kelurahan','kel',true);
+        $this->load->model('M_sektorusaha','sek',true);
+        $this->load->model('M_skalausaha','ska',true);
     }
 
     public function index($offset = 0)
@@ -52,8 +52,33 @@ class Datausaha extends CI_Controller {
 
     public function add()
     {
-        $nama = $this->input->post('nama_usaha'); // dari form
-        $data['nama_usaha'] = $nama; // membuat array dari data post
+        //Take data from Form
+        $id_u = $this->input->post('id_user');
+        $id_k = $this->input->post('id_kecamatan');
+        $id_k2 = $this->input->post('id_kelurahan');
+        $id_se = $this->input->post('id_sektor');
+        $id_sk = $this->input->post('id_skalausaha');
+        $nama = $this->input->post('nama_usaha');
+        $produk = $this->input->post('produk');
+        $alamat = $this->input->post('alamat_usaha');
+        $la = $this->input->post('latitude');
+        $lo = $this->input->post('longitude');
+        $omzet = $this->input->post('omzet');
+
+        // Make array from data POST
+        $data['id_user'] = $id_u;
+        $data['id_kecamatan'] = $id_k;
+        $data['id_kelurahan'] = $id_k2;
+        $data['id_sektor'] = $id_se;
+        $data['id_skalausaha'] = $id_sk;
+        $data['nama_usaha'] = $nama;
+        $data['produk'] = $produk;
+        $data['alamat_usaha'] = $alamat;
+        $data['latitude'] = $la;
+        $data['longitude'] = $lo;
+        $data['omzet'] = $omzet;
+
+        // NOTIFICATION
         if($this->usa->add($data)){
             $this->session->set_flashdata('status',1);
             $this->session->set_flashdata('pesan','Data Berhasil ditambah');

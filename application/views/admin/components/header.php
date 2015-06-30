@@ -19,7 +19,6 @@
 
     <!-- Morris Charts CSS -->
     <link href="<?php echo base_url('assets/css/plugins/morris.css'); ?>" rel="stylesheet">
-    <link href="<?php echo base_url('assets/css/plugins/morris.css'); ?>" rel="stylesheet">
 
     <link href="<?php echo base_url('assets/css/jquery-ui.css'); ?>" rel="stylesheet">
     <!-- Custom Fonts -->
@@ -196,6 +195,13 @@
                         </li>
                     </ul>
                 </li>
+                <li <?php echo $aktip=='aktivasipu'?'class="active"':"";?>>
+                    <a  href="<?php echo base_url('admin/aktivasipu/'); ?>"><i class="fa fa-fw fa-user"></i>Aktivasi Pemilik Usaha</a>
+                </li>
+                <li <?php echo $aktip=='aktivasidu'?'class="active"':"";?>>
+                    <a  href="<?php echo base_url('admin/aktivasidu/'); ?>"><i class="fa fa-fw fa-user"></i>Aktivasi Data Usaha</a>
+                </li>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
