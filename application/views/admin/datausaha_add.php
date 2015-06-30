@@ -1,15 +1,27 @@
-<<<<<<< HEAD
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
 <script src="../jquery.geocomplete.js"></script>
+<script src="asset/js/logger.js"></script>
 <script>
     $(function(){
         $("#geocomplete").geocomplete()
     });
 
+    $(function(){
+        $("#geocomplete").geocomplete({
+            map: "#map_canvas",
+            details: "form",
+            types: ["geocode", "establishment"],
+        });
+
+        $("#find").click(function(){
+            $("#geocomplete").trigger("geocode");
+        });
+    });
+
 </script>
 
 <div id="page-wrapper" >
-=======
 <script type="text/javascript">
   function initialize() {
 	  
@@ -84,11 +96,10 @@
  google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <div id="page-wrapper" onload="initialize()">
->>>>>>> origin/master
 <div class="container-fluid">
     <div class="row">
-        
-            <form action="<?php echo !empty($edit)? base_url('admin/datausaha/edit/'.$datausaha->id_usaha): base_url('admin/datausaha/add'); ?>" method="post" role="form">
+
+            <form action="<?php echo !empty($edit)? base_url('admin/datausaha/edit/'.$usaha->id_usaha): base_url('admin/datausaha/add'); ?>" method="post" role="form">
                 <legend><?php echo !empty($edit)?"Edit Data Usaha":"Tambah Data Usaha";?></legend>
 		<div class="col-md-3">		
                 <div class="form-group">
@@ -133,17 +144,13 @@
                 </div>
                 <div class="form-group">
                     <label for="">Omzet</label>
-                    <input type="text" class="form-control" name="omzet" id="" placeholder="Omzet" required value="Rp. <?php echo !empty($datausaha)?$datausaha->omzet:''?>">
+                    <input type="text" class="form-control" name="omzet" id="" placeholder="Rp." required value="<?php echo !empty($datausaha)?$datausaha->omzet:''?>">
                 </div>
-<<<<<<< HEAD
-=======
-                
->>>>>>> origin/master
         </div>
         <div class="col-md-3">
                 <div class="form-group">
                     <label for="">Nama Pemilik</label>
-                    <input type="text" class="form-control" name="nama_pemilik" id="nama_pemilik" placeholder="Pemilik Usaha" required value="<?php echo !empty($datausaha)?$datausaha->id_user:''?>">
+                    <input type="text" class="form-control" name="id_user" id="" placeholder="Pemilik Usaha" required value="<?php echo !empty($datausaha)?$datausaha->id_user:''?>">
                 </div>
                 <div class="form-group">
                     <label for="">Produk</label>
@@ -152,7 +159,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Alamat</label>
-                    <input type="text" class="form-control" name="alamat_usaha" id="" placeholder="Alamat" required
+                    <input type="text" class="form-control" name="alamat_usaha" id="geocomplete" placeholder="Alamat" required
                            value="<?php echo !empty($datausaha)?$datausaha->alamat_usaha:''?>">
                 </div>
                 <div class="form-group">
@@ -165,22 +172,45 @@
                     <input type="text" class="form-control" name="longitude" id="" placeholder="Longitude" required
                            value="<?php echo !empty($datausaha)?$datausaha->longitude:''?>" disabled>
                 </div>
+                <div class="form-group">
+                    <label for="">No Telp</label>
+                    <input type="text" class="form-control" name="no_telp" id="" placeholder="No Telp" required
+                           value="<?php echo !empty($datausaha)?$datausaha->no_tlp:''?>">
+                </div>
         </div>
-<<<<<<< HEAD
          </form>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">Map</div>
+                </div>
+                <div id="map_canvas" class="panel-body" style="height: 384px"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-striped table-hover" id="myTable">
+                <thead>
+                <tr>
+                    <th>Foto Usaha</th>
+                </tr>
+                </thead>
+                <tbody id="RepeatRow">
+                <tr>
+                    <td><input class="form-control" type="file" name="tmbhgambar0" id=""/></td>
+                    <td><a href="#" class="btn btn-success" id="TambahRow"><i class="fa fa-plus"></i></a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-3"></div>
+        <div class="form-group text-right col-lg-3" style="margin-top: 40px">
+            <button type="submit" class="btn btn-primary btn-block">Simpan</button>
+        </div>
     </div>
 </div>
-=======
-        <div class="col-md-6">
-        	<div class="panel panel-default">
-	        	<div class="panel-heading">
-		        	<div class="panel-title">Map</div>
-	        	</div>
-	        	<div id="map_canvas" class="panel-body" style="height: 384px">
-	        	</div>
-        	</div>
-        	
-                <br>
                 <br>
                 <br>
                 <br>
@@ -194,9 +224,6 @@
                 <br>
         </div>
          </form>
-         
-    </div></div>
->>>>>>> origin/master
 </div>
 
 <script>
@@ -218,4 +245,28 @@
 		});
 	});
 
+    var jumlah = 1;
+    $('#TambahRow').on('click',function(){
+        $('#RepeatRow').prepend(
+            "<tr id='tmbhgambar"+jumlah+"'><td><input class='form-control' type='file' name='tmbhgambar"+jumlah+"' id=''/></td>"+
+            "<td><a onclick='deleteRow(this)' href='#' class='btn btn-danger' id='tmbhgambar"+jumlah+"'><i class='fa fa-minus'></i></a></td></tr>"
+        );
+        jumlah++;
+        if(jumlah>=5){
+            $('#TambahRow').hide();
+        }
+    });
+
+
+    function deleteRow(t)
+    {
+        var msg = "Yakin Dikurangi ?";
+        if(confirm(msg)){
+            var row = t.parentNode.parentNode;
+            document.getElementById("myTable").deleteRow(row.rowIndex);
+            console.log(row);
+            $('#TambahRow').show();
+            jumlah--;
+        }
+    }
 </script>

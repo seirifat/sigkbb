@@ -46,17 +46,10 @@
                                     <thead>
                                     <tr>
                                         <th class="text-center" height="10px">No</th>
-                                        <th class="text-center">Pemilik</th>
                                         <th class="text-center">Nama Usaha</th>
-                                        <th class="text-center">Kecamatan</th>
-                                        <th class="text-center">Kelurahan</th>
-                                        <th class="text-center">Sektor</th>
-                                        <th class="text-center">Skala</th>
-                                        <th class="text-center">Produk</th>
-                                        <th class="text-center">Alamat</th>
-                                        <th class="text-center">Latitude</th>
-                                        <th class="text-center">Longitude</th>
-                                        <th class="text-center">Omzet</th>
+                                        <th class="text-center">Pemilik Usaha</th>
+                                        <th class="text-center">Sektor Usaha</th>
+                                        <th class="text-center">Produk Utama</th>
                                         <th class="text-center">Aksi</th>
                                     </tr>
                                     </thead>
@@ -65,18 +58,13 @@
                                     <?php foreach($datausaha as $row){?>
                                         <tr>
                                             <td class="text-center"><?php echo $i;?></td>
-                                            <td class="text-center"><?php echo $row->id_user;?></td>
                                             <td class="text-center"><?php echo $row->nama_usaha;?></td>
-                                            <td class="text-center"><?php echo $row->id_kecamatan;?></td>
-                                            <td class="text-center"><?php echo $row->id_kelurahan;?></td>
+                                            <td class="text-center"><?php echo $row->id_user;?></td>
                                             <td class="text-center"><?php echo $row->id_sektor;?></td>
-                                            <td class="text-center"><?php echo $row->id_skalausaha;?></td>
                                             <td class="text-center"><?php echo $row->produk;?></td>
-                                            <td class="text-center"><?php echo $row->alamat_usaha;?></td>
-                                            <td class="text-center"><?php echo $row->latitude;?></td>
-                                            <td class="text-center"><?php echo $row->longitude;?></td>
-                                            <td class="text-center"><?php echo $row->omzet;?></td>
-                                            <td class="text-center"><a href="<?php echo base_url('admin/datausaha/editview/'.$row->id_usaha);?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
+                                            <td class="text-center">
+                                                <a href="<?php echo base_url('admin/datausaha/detilview/'.$row->id_usaha);?>" class="btn btn-info"><i class="fa fa-list"></i></a>
+                                                <a href="<?php echo base_url('admin/datausaha/editview/'.$row->id_usaha);?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
                                                 <a onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?')" href="<?php echo base_url('admin/datausaha/delete/'.$row->id_usaha); ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
                                         </tr>
                                         <?php $i++;?>
@@ -85,13 +73,15 @@
                                     <?php //echo $this->pagination->create_links();?>
                                     </tbody>
                                 </table>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /.row -->
-                <!--    <script>-->
-                <!--        $('#ss').click(function () {-->
-                <!--            alert('aaaa');-->
-                <!--        });-->
-                <!--    </script>-->

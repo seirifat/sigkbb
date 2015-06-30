@@ -167,15 +167,9 @@
                 <li <?php echo $aktip=='home'?'class="active"':"";?> >
                     <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                 </li>
-                <li>
+                <li <?php echo $aktip=='datausaha'?'class="active"':"";?> >
                     <a href="<?php echo base_url('admin/datausaha/'); ?>"><i class="fa fa-fw fa-bar-chart-o"></i>Data Usaha</a>
                 </li>
-                <!--<li>
-                    <a href="<?php echo base_url('admin/kecamatan/'); ?>"><i class="fa fa-fw fa-table"></i>Kecamatan</a>
-                </li>
-                <li>
-                    <a href="<?php echo base_url('admin/kelurahan/'); ?>"><i class="fa fa-fw fa-edit"></i>Kelurahan</a>
-                </li>-->
                 <li <?php echo $aktip=='sektor'?'class="active"':"";?> >
                     <a href="<?php echo base_url('admin/sektorusaha/'); ?>"><i class="fa fa-fw fa-bar-chart-o"></i>Sektor Usaha</a>
                 </li>
@@ -183,19 +177,13 @@
                     <a href="<?php echo base_url('admin/skalausaha/'); ?>"><i class="fa fa-fw fa-bar-chart-o"></i>Skala Usaha</a>
                 </li>
                 <li <?php echo $aktip=='user'?'class="active"':"";?>>
-                    <a  href="<?php echo base_url('admin/user/'); ?>"><i class="fa fa-fw fa-user"></i>Pemilik Usaha</a>
+                    <a  href="<?php echo base_url('admin/user/'); ?>"><i class="fa fa-fw fa-user"></i>User</a>
                 </li>
-                <li <?php echo $aktip=='kecamatan'?'class="active"':"";?>
-                <?php echo $aktip=='kelurahan'?'class="active"':"";?> >
-                    <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-desktop"></i> Wilayah <i class="fa fa-fw fa-caret-down"></i></a>
-                    <ul id="demo" class="collapse">
-                        <li <?php echo $aktip=='kecamatan'?'class="active"':"";?> >
-                            <a  href="<?php echo base_url('admin/kecamatan/'); ?>"><i class="fa fa-fw fa-table"></i>Kecamatan</a>
-                        </li>
-                        <li <?php echo $aktip=='kelurahan'?'class="active"':"";?>>
-                            <a href="<?php echo base_url('admin/kelurahan/'); ?>"><i class="fa fa-fw fa-table"></i>Kelurahan</a>
-                        </li>
-                    </ul>
+                <li <?php echo $aktip=='kecamatan'?'class="active"':"";?> >
+                    <a  href="<?php echo base_url('admin/kecamatan/'); ?>"><i class="fa fa-fw fa-table"></i>Kecamatan</a>
+                </li>
+                <li <?php echo $aktip=='kelurahan'?'class="active"':"";?>>
+                    <a href="<?php echo base_url('admin/kelurahan/'); ?>"><i class="fa fa-fw fa-table"></i>Kelurahan</a>
                 </li>
                 <li <?php echo $aktip=='aktivasipu'?'class="active"':"";?>>
                     <a  href="<?php echo base_url('admin/aktivasipu/'); ?>"><i class="fa fa-fw fa-user"></i>Aktivasi Pemilik Usaha</a>

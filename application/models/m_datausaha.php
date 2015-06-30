@@ -40,8 +40,8 @@ class M_datausaha extends CI_Model {
     public function selectById($id)
     {
         $this->db->select('*');
-        $this->db->from('kecamatan');
-        $this->db->where('id_kecamatan',$id);
+        $this->db->from('data_usaha');
+        $this->db->where('id_usaha',$id);
         $data = $this->db->get()->row();
         return $data;
     }

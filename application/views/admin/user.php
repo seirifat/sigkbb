@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12 ">
                 <h1 class="page-header">
-                    Data Pemilik Usaha
+                    Data User
                 </h1>
                 <div class="row">
                     <div class="col-lg-6">
@@ -32,7 +32,7 @@
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-tasks fa-fw"></i> Kelurahan</h3>
+                                <h3 class="panel-title"><i class="fa fa-tasks fa-fw"></i> User</h3>
                             </div>
                             <div class="panel-body">
                                 <table class="table table-striped table-hover table-responsive">
@@ -42,10 +42,6 @@
                                         <th class="text-center">Nama </th>
                                         <th class="text-center">Email </th>
                                         <th class="text-center">Alamat </th>
-                                        <!--<th class="text-center">Password </th>-->
-                                        <th class="text-center">Tempat Lahir </th>
-                                        <th class="text-center">Tanggal Lahir </th>
-                                        <th class="text-center">KTP </th>
                                         <th class="text-center">Status </th>
                                         <th class="text-center">Aksi</th>
                                     </tr>
@@ -55,17 +51,16 @@
                             <?php foreach($datauser as $row){  //dari controlller pada fungsi index?>
                                 <tr>
                                     <td class="text-center"><?php echo $i;?></td>
-                                    <td><?php echo $row->nama_user;?></td>
-                                    <td><?php echo $row->email_user;?></td>
-                                    <td><?php echo $row->alamat_user;?></td>
-                                    <!--<td><?php echo $row->password;?></td>-->
-                                    <td><?php echo $row->tempat;?></td>
-                                    <td><?php echo $row->tgl_lahir;?></td>
-                                    <td><?php echo $row->file_ktp;?></td>
-                                    <td><?php echo $row->status_user;?></td>
-                                    <td class="text-center"><a href="<?php echo base_url('admin/user/editview/'.$row->id_user);?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
+                                    <td class="text-center"><?php echo $row->nama_user;?></td>
+                                    <td class="text-center"><?php echo $row->email_user;?></td>
+                                    <td class="text-center"><?php echo $row->alamat_user;?></td>
+                                    <td class="text-center"><?php echo $row->status_user;?></td>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url('admin/user/detilview/'.$row->id_user);?>" class="btn btn-info"><i class="fa fa-list"></i></a>
+                                        <a href="<?php echo base_url('admin/user/editview/'.$row->id_user);?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
                                         <a href="<?php echo base_url('admin/user/delete'); ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
                                 </tr>
+                                <?php $i++;?>
                             <?php }?>
                             </tbody>
                         </table>
