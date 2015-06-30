@@ -1,27 +1,5 @@
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
-<script src="../jquery.geocomplete.js"></script>
-<script src="asset/js/logger.js"></script>
-<script>
-    $(function(){
-        $("#geocomplete").geocomplete()
-    });
 
-    $(function(){
-        $("#geocomplete").geocomplete({
-            map: "#map_canvas",
-            details: "form",
-            types: ["geocode", "establishment"],
-        });
 
-        $("#find").click(function(){
-            $("#geocomplete").trigger("geocode");
-        });
-    });
-
-</script>
-
-<div id="page-wrapper" >
 <script type="text/javascript">
   function initialize() {
 	  
@@ -95,6 +73,8 @@
   }
  google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+
+<div id="page-wrapper" >
 <div id="page-wrapper" onload="initialize()">
 <div class="container-fluid">
     <div class="row">
@@ -159,18 +139,18 @@
                 </div>
                 <div class="form-group">
                     <label for="">Alamat</label>
-                    <input type="text" class="form-control" name="alamat_usaha" id="geocomplete" placeholder="Alamat" required
+                    <input type="text" class="form-control" name="alamat_usaha" id="us2-address" placeholder="Alamat" required
                            value="<?php echo !empty($datausaha)?$datausaha->alamat_usaha:''?>">
                 </div>
                 <div class="form-group">
                     <label for="">Latitude</label>
-                    <input type="text" class="form-control" name="latitude" id="" placeholder="Latitude" required
-                           value="<?php echo !empty($datausaha)?$datausaha->latitude:''?>" disabled>
+                    <input type="text" class="form-control" name="latitude" id="us2-lat" placeholder="Latitude" required
+                           value="<?php echo !empty($datausaha)?$datausaha->latitude:''?>" readonly>
                 </div>
                 <div class="form-group">
                     <label for="">Longitude</label>
-                    <input type="text" class="form-control" name="longitude" id="" placeholder="Longitude" required
-                           value="<?php echo !empty($datausaha)?$datausaha->longitude:''?>" disabled>
+                    <input type="text" class="form-control" name="longitude" id="us2-lon" placeholder="Longitude" required
+                           value="<?php echo !empty($datausaha)?$datausaha->longitude:''?>" readonly>
                 </div>
                 <div class="form-group">
                     <label for="">No Telp</label>
@@ -184,7 +164,15 @@
                 <div class="panel-heading">
                     <div class="panel-title">Map</div>
                 </div>
-                <div id="map_canvas" class="panel-body" style="height: 384px"></div>
+                <div class="panel-body">
+                	<div class="form-horizontal">
+            <div id="us2" style="height: 330px;"></div>
+            <div class="clearfix">&nbsp;</div>
+            <div class="clearfix"></div>
+        </div>
+
+</div>
+                </div>
             </div>
         </div>
     </div>
@@ -223,8 +211,20 @@
                 <br>
                 <br>
         </div>
-         </form>
-</div>
+
+<script>
+	$('#us2').locationpicker({
+	    location: {latitude: -6.8162073, longitude: 107.62279609999996},
+	    radius: 550,
+	    inputBinding: {
+	        latitudeInput: $('#us2-lat'),
+	        longitudeInput: $('#us2-lon'),
+	        //radiusInput: $('#us2-radius'),
+	        locationNameInput: $('#us2-address')
+	    },
+	    enableAutocomplete: true
+	});
+</script>
 
 <script>
 	$('#id_kecamatan').change(function(){
