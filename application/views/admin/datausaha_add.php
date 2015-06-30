@@ -1,4 +1,77 @@
-<div id="page-wrapper" >
+<script type="text/javascript">
+  function initialize() {
+	  
+		//Map
+	    var latlng = new google.maps.LatLng(35.658517,139.70133399999997);
+	    var myOptions = {
+	      zoom: 15,
+	      center: latlng,
+	      mapTypeId: google.maps.MapTypeId.ROADMAP
+	    };
+	    var map = new google.maps.Map(document.getElementById("map_canvas"),
+	        myOptions);
+		
+		//Marker
+		var marker_latlng = new google.maps.LatLng(35.658517, 139.70133399999997);
+		var marker = new google.maps.Marker({
+			position: marker_latlng,
+			map: map,
+			//draggable:true,
+			animation: google.maps.Animation.DROP,
+			icon: 'phones.png',
+			title:"Title Marker!"
+		});
+		//Marker
+		var marker_latlng2 = new google.maps.LatLng(35.65955434501228, 139.69873762167356);
+		var marker2 = new google.maps.Marker({
+			position: marker_latlng2,
+			map: map,
+			//draggable:true,
+			animation: google.maps.Animation.DROP,
+			icon: 'music.png',
+			title:"Title Marker2!"
+		});
+		
+		//Info Marker
+		var contentString = 'Info Map Marker';
+
+		var infowindow = new google.maps.InfoWindow({
+			content: contentString
+		});
+
+		google.maps.event.addListener(marker, 'click', function() {
+			infowindow.open(map,marker);
+		});
+		
+		//Info Marker
+		var contentString2 = 'Info Map Marker 2';
+
+		var infowindow2 = new google.maps.InfoWindow({
+			content: contentString2
+		});
+
+		google.maps.event.addListener(marker2, 'click', function() {
+			infowindow2.open(map,marker2);
+		});
+		
+		//lingkaran radius
+		var bufferOptions = {
+	        strokeColor: "#FF0000",
+	        strokeOpacity: 0.5,
+	        strokeWeight: 1,
+	        fillColor: "#FF0000",
+	        fillOpacity: 0.1,
+	        map: map,
+	        center: new google.maps.LatLng(35.65955434501228, 139.69873762167356),
+	        radius: 255
+	      };
+	      
+	      var cityCircle = new google.maps.Circle(bufferOptions);
+	
+  }
+ google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<div id="page-wrapper" onload="initialize()">
 <div class="container-fluid">
     <div class="row">
         
@@ -52,18 +125,6 @@
                            value="<?php echo !empty($datausaha)?$datausaha->omzet:''?>">
                 </div>
                 
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
         </div>
         <div class="col-md-3">
                 <div class="form-group">
@@ -93,22 +154,31 @@
                 <div class="form-group text-right" style="margin-top: 40px">
                     <button type="submit" class="btn btn-primary btn-block">Simpan</button>
                 </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
         </div>
         <div class="col-md-6">
+        	<div class="panel panel-default">
+	        	<div class="panel-heading">
+		        	<div class="panel-title">Map</div>
+	        	</div>
+	        	<div id="map_canvas" class="panel-body" style="height: 384px">
+	        	</div>
+        	</div>
+        	
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
         </div>
          </form>
+         
     </div></div>
 </div>
 
