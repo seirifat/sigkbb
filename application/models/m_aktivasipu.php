@@ -19,9 +19,6 @@ class M_aktivasipu extends CI_Model {
         $this->db->update('nama_user',$dataAktivasipu);
         $this->db->update('email_user',$dataAktivasipu);
         $this->db->update('alamat_user',$dataAktivasipu);
-        $this->db->update('tempat',$dataAktivasipu);
-        $this->db->update('tgl_lahir',$dataAktivasipu);
-        $this->db->update('file_ktp',$dataAktivasipu);
         $this->db->update('status_user',$dataAktivasipu);
         if($this->db->affected_rows()>0){
             return true;
@@ -29,15 +26,20 @@ class M_aktivasipu extends CI_Model {
             return false;
         }
     }
+    public function selectById($id)
+    {
+        $this->db->select('*');
+        $this->db->from('user');
+        $this->db->where('id_user',$id);
+        $data = $this->db->get()->row();
+        return $data;
+    }
     public function delete($id)
     {
         $this->db->where('id_user',$id);
         $this->db->delete('nama_user');
         $this->db->delete('email_user');
         $this->db->delete('alamat_user');
-        $this->db->delete('tempat');
-        $this->db->delete('tgl_lahir');
-        $this->db->delete('file_ktp');
         $this->db->delete('status_user');
         if($this->db->affected_rows()>0){
             return true;
@@ -45,6 +47,9 @@ class M_aktivasipu extends CI_Model {
             return false;
         }
     }
+
+
+
     public function search()
     {
         //$this->load->view('admin/login');

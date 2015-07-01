@@ -25,17 +25,21 @@ class User extends CI_Controller {
         $email = $this->input->post('email_user'); // dari form
         $alamat = $this->input->post('alamat_user'); // dari form
         $password = $this->input->post('password'); // dari form
+        $file_ktp = $this->input->post('file_ktp'); // dari form
+        $status_user = $this->input->post('status_user'); // dari form
         $tempat = $this->input->post('tempat'); // dari form
         $tgl_lahir = $this->input->post('tgl_lahir'); // dari form
-        $file_ktp = $this->input->post('file_ktp'); // dari form
+
 
         $data['nama_user'] = $nama; // membuat array dari data post
         $data['email_user'] = $email; // membuat array dari data post
         $data['alamat_user'] = $alamat; // membuat array dari data post
         $data['password'] = $password; // membuat array dari data post
+        $data['file_ktp'] = $file_ktp; // membuat array dari data post
+        $data['status_user'] = $status_user; // membuat array dari data post
         $data['tempat'] = $tempat; // membuat array dari data post
         $data['tgl_lahir'] = $tgl_lahir; // membuat array dari data post
-        $data['file_ktp'] = $file_ktp; // membuat array dari data post
+
         if($this->us->add($data)){
             $this->session->set_flashdata('status',1);
             $this->session->set_flashdata('pesan','Data Berhasil ditambah');
@@ -45,6 +49,7 @@ class User extends CI_Controller {
         }
         redirect(base_url('admin/user'));
     }
+
     public function addview()
     {
     	$this->judul['aktip'] = "user";
@@ -115,7 +120,7 @@ class User extends CI_Controller {
         //$this->load->view('admin/login');
         echo "ini tambah kecamatan";
     }
-    public function detilview()
+    public function detilview($id)
     {
         $this->judul['aktip'] = "user";
         $datauser = $this->us->selectById($id);

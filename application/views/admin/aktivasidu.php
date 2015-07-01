@@ -4,13 +4,12 @@
         <div class="row">
             <div class="col-lg-12 ">
                 <h1 class="page-header">
-                    Data Sektor Usaha KBB
+                    Aktivasi Data Usaha
                 </h1>
                 <div class="row">
                     <div class="col-lg-6">
-                        <a href="<?php echo base_url('admin/sektorusaha/addview'); ?>" class="btn btn-success"><i class="fa fa-plus"></i></a>
-                        <a onclick="location.reload();" href="#" class="btn btn-info">
-                        	<i class="glyphicon glyphicon-refresh"></i>
+                        <a onclick="location.reload();" href="#" class="btn btn-success">
+                            <i class="glyphicon glyphicon-refresh"></i>
                         </a>
                     </div>
                     <div class="col-lg-3 col-md-offset-3 text-right">
@@ -31,34 +30,60 @@
                 <?php endif;?>
                 <div class="row">
                     <div class="col-lg-12">
-                    <div class="panel panel-default">
-                    	  <div class="panel-heading">
-                    			<h3 class="panel-title"><i class="fa fa-tasks fa-fw"></i> Sektor Usaha</h3>
-                    	  </div>
-                    	  <div class="panel-body">
-                              <table class="table table-striped table-hover table-responsive">
-                                  <thead>
-                                  <tr>
-                                      <th class="text-center" height="10px">No</th>
-                                      <th class="text-center">Nama Sektor Usaha</th>
-                                      <th class="text-center">Aksi</th>
-                                  </tr>
-                                  </thead>
-                                  <tbody>
-                                  <?php $i = 1;?>
-                                  <?php foreach($datasektorusaha as $row){?>
-                                      <tr>
-                                          <td class="text-center"><?php echo $i;?></td>
-                                          <td><?php echo $row->nama_sektor;?></td>
-                                          <td class="text-center"><a href="<?php echo base_url('admin/sektorusaha/editview/'.$row->id_sektor);?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                                              <a onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?')" href="<?php echo base_url('admin/sektorusaha/delete/'.$row->id_sektor); ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
-                                      </tr>
-                                      <?php $i++;?>
-                                  <?php }?>
-                                  </tbody>
-                              </table>
-                    	  </div>
-                    </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-tasks fa-fw"></i>Aktivasi Data Usaha</h3>
+                            </div>
+                            <div class="panel-body">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th class="text-center">No</th>
+                                        <th class="text-center">Nama Usaha</th>
+                                        <th class="text-center">Sektor Usaha</th>
+                                        <th class="text-center">Produk Utama</th>
+                                        <th class="text-center">Status</th>
+                                        <th class="text-center">Aksi</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <?php $i=1; ?>
+                                    <?php foreach($dataAktivasidu as $row)
+                                    {
+                                        ?>
+                                        <tr>
+                                            <td class="text-center"><?php echo $i;?></td>
+                                            <td class="text-center"><?php echo $row->nama_usaha; ?></td>
+                                            <td class="text-center"><?php echo $row->id_usaha; ?></td>
+                                            <td class="text-center"><?php echo $row->produk; ?></td>
+                                            <td class="text-center"><div class="label label-warning">Tidak Aktif</div></td>
+                                            <td class="text-center">
+                                                <a href="<?php echo base_url('admin/aktivasidu/editview/'.$row->id_usaha);?>" class="btn btn-info"><i class="fa fa-pencil"></i></a>
+                                            </td>
+                                            <?php /*if($this->session->userdata('usergroup')==1):?>
+                                              <td>
+                                                  <a onclick="window.location='<?=base_url();?>admin/user/updateview?uid=<?=$row->usersid;?>'" href="javascript:void(0)" class="btn btn-warning" ><i class="fa fa-edit"></i></a>
+                                                  <a onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?')" href="<?php echo base_url('admin/datausaha/delete/'.$row->id_usaha); ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a></td></td>
+                                          <?php endif;*/?>
+                                        </tr>
+                                        <?php $i++; ?>
+                                    <?php
+                                    }
+                                    ?>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+
+                        </div>
 
                     </div>
                 </div>

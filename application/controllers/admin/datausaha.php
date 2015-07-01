@@ -154,7 +154,6 @@ class Datausaha extends CI_Controller {
 
     public function editview($id)
     {
-
         $this->judul['aktip'] = "datausaha";
         $data['edit'] = true;
         $datausaha = $this->usa->selectById($id);

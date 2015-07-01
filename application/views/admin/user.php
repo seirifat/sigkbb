@@ -58,7 +58,7 @@
                                     <td class="text-center">
                                         <a href="<?php echo base_url('admin/user/detilview/'.$row->id_user);?>" class="btn btn-info"><i class="fa fa-list"></i></a>
                                         <a href="<?php echo base_url('admin/user/editview/'.$row->id_user);?>" class="btn btn-warning"><i class="fa fa-pencil"></i></a>
-                                        <a href="<?php echo base_url('admin/user/delete'); ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
+                                        <a href="<?php echo base_url('admin/user/delete/'.$row->id_user); ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a></td>
                                 </tr>
                                 <?php $i++;?>
                             <?php }?>

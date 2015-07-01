@@ -8,8 +8,7 @@
                 </h1>
                 <div class="row">
                     <div class="col-lg-6">
-                        <a href="<?php echo base_url('admin/aktivasipu/'); ?>" class="btn btn-success"><i class="fa fa-plus"></i></a>
-                        <a onclick="location.reload();" href="#" class="btn btn-info">
+                        <a onclick="location.reload();" href="#" class="btn btn-success">
                         	<i class="glyphicon glyphicon-refresh"></i>
                         </a>
                     </div>
@@ -39,36 +38,48 @@
                               <table class="table table-striped table-hover">
                                   <thead>
                                   <tr>
-                                      <th>Nama</th>
-                                      <th>Email</th>
-                                      <th>Alamat</th>
-                                      <th>File KTP</th>
-                                      <th>Status</th>
+                                      <th class="text-center">No</th>
+                                      <th class="text-center">Nama</th>
+                                      <th class="text-center">Email</th>
+                                      <th class="text-center">Alamat</th>
+                                      <th class="text-center">Status</th>
+                                      <th class="text-center">Aksi</th>
                                   </tr>
                                   </thead>
                                   <tbody>
+                                  <?php $i=1; ?>
                                   <?php foreach($dataAktivasipu as $row)
                                   {
                                       ?>
                                       <tr>
-                                          <td><?php echo $row->nama_user; ?></td>
-                                          <td><?php echo $row->email_user; ?></td>
-                                          <td><?php echo $row->alamat_user; ?></td>
-                                          <td><?php echo $row->file_ktp; ?></td>
-                                          <td><div class="label label-warning">Not Available</div></td>
-                                          <td></td>
+                                          <td class="text-center"><?php echo $i;?></td>
+                                          <td class="text-center"><?php echo $row->nama_user; ?></td>
+                                          <td class="text-center"><?php echo $row->email_user; ?></td>
+                                          <td class="text-center"><?php echo $row->alamat_user; ?></td>
+                                          <td class="text-center"><div class="label label-warning">Tidak Aktif</div></td>
+                                          <td class="text-center">
+                                              <a href="<?php echo base_url('admin/aktivasipu/editview/'.$row->id_user);?>" class="btn btn-info"><i class="fa fa-pencil"></i></a>
+                                          </td>
                                           <?php /*if($this->session->userdata('usergroup')==1):?>
                                               <td>
                                                   <a onclick="window.location='<?=base_url();?>admin/user/updateview?uid=<?=$row->usersid;?>'" href="javascript:void(0)" class="btn btn-warning" ><i class="fa fa-edit"></i></a>
                                                   <a onclick="return confirm('Apakah anda yakin ingin menghapus data ini ?')" href="<?php echo base_url('admin/datausaha/delete/'.$row->id_usaha); ?>" class="btn btn-danger"><i class="fa fa-trash"></i></a></td></td>
                                           <?php endif;*/?>
                                       </tr>
+                                      <?php $i++; ?>
                                   <?php
                                   }
                                   ?>
                                   </tbody>
                               </table>
+                              <br>
+                              <br>
+                              <br>
+                              <br>
+                              <br>
+                              <br>
                     	  </div>
+
                     </div>
 
                     </div>

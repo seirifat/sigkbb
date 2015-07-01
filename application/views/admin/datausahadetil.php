@@ -111,7 +111,6 @@
             </div><div class="row" style="margin-bottom: 20px">
                 <div class="col-lg-12">
                     <a href="<?=base_url('admin/datausaha')?>" class="btn btn-success"><i class="glyphicon glyphicon-arrow-left"></i></a>
-                    <a href="<?=base_url('admin/datausaha/print');?>" class="btn btn-info"><i class="fa fa-lg fa-print"></i></a>
                 </div>
             </div>
 

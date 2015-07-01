@@ -75,7 +75,11 @@ class M_datausaha extends CI_Model {
         //$this->load->view('admin/login');
         echo "ini tambah kecamatan";
     }
-
+    function eksport_data() {
+        $this->db->select('id_usaha, id_user, id_kecamatan, id_kelurahan, id_sektor, id_skalausaha, nama_usaha, produk, alamat_usaha, latitude, longitude, omzet, no_tlp, status_usaha');
+        $this->db->from('data_usaha');
+        return $this->db->get();
+    }
 }
 
 /* End of file welcome.php */

@@ -51,7 +51,7 @@ class Aktivasipu extends CI_Controller {
     }
     public function editview($id)
     {
-        $this->judul['aktip'] = "sektor";
+        $this->judul['aktip'] = "aktivasipu";
         $data['edit'] = true;
         $dataAktivasipu = $this->apu->selectById($id);
         $data['aktivasipu'] =  $dataAktivasipu; //edit nanti dijadikan variabel di view

@@ -24,6 +24,7 @@ class Sektorusaha extends CI_Controller {
     {
         $nama = $this->input->post('nama_sektor'); // dari form
         $data['nama_sektor'] = $nama; // membuat array dari data post
+
         if($this->sek->add($data)){
             $this->session->set_flashdata('status',1);
             $this->session->set_flashdata('pesan','Data Berhasil ditambah');

@@ -18,6 +18,7 @@
                         <a onclick="location.reload();" href="#" class="btn btn-info">
                             <i class="glyphicon glyphicon-refresh"></i>
                         </a>
+                        <a href="<?=base_url('admin/report');?>" class="btn btn-default"><i class="fa fa-lg fa-print"></i></a>
                     </div>
                     <div class="col-lg-3 col-md-offset-3 text-right">
                         <input type="text" name="cariData" id="cariData" class="form-control" value="" title="" placeholder="Cari data" required="required" >
