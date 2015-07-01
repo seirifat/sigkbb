@@ -10,9 +10,9 @@
     <div class="container">
         <h1>Login Admin</h1>
 
-        <form class="form">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
+        <form class="form" action="<?php echo base_url('admin/login');?>" method="post">
+            <input type="text" placeholder="Username" name="id_user">
+            <input type="password" placeholder="Password" name="password">
             <button type="submit" id="login-button">Login</button>
         </form>
     </div>

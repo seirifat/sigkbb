@@ -1,0 +1,1 @@
+<?php echo"ini setelah logout dari admin"; ?>
