@@ -45,6 +45,7 @@ class M_datausaha extends CI_Model {
         $data = $this->db->get()->row();
         return $data;
     }
+
     public function edit($id,$datausaha)
     {
         $this->db->where('id_usaha',$id);

@@ -113,7 +113,6 @@ class Datausaha extends CI_Controller {
     {
         //Take data from Form
         $id_u = $this->input->post('id_user');
-        $id_usaha = $this->input->post('id_usaha');
         $id_k = $this->input->post('id_kecamatan');
         $id_k2 = $this->input->post('id_kelurahan');
         $id_se = $this->input->post('id_sektor');
@@ -127,7 +126,6 @@ class Datausaha extends CI_Controller {
         $telp = $this->input->post('no_tlp');
 
         // Make array from data POST
-        $data['id_usaha'] = $id_usaha;
         $data['id_user'] = $id_u;
         $data['id_kecamatan'] = $id_k;
         $data['id_kelurahan'] = $id_k2;
@@ -180,11 +178,12 @@ class Datausaha extends CI_Controller {
         redirect(base_url('admin/datausaha'));
     }
 
-    public function detilview()
+    public function detilview($id)
     {
         $this->judul['aktip'] = "datausaha";
         $datausaha = $this->usa->selectById($id);
         $data['usaha'] =  $datausaha; //usaha nanti dijadikan variabel di view
+        //var_dump($data['usaha']);die;
         $this->load->view('admin/components/header',$this->judul);
         $this->load->view('admin/datausahadetil',$data);
         $this->load->view('admin/components/footer');

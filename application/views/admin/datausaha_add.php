@@ -84,7 +84,7 @@
 		<div class="col-md-3">		
                 <div class="form-group">
                     <label for="">Nama Usaha</label>
-                    <input type="text" class="form-control" name="nama_usaha" id="" placeholder="Nama Usaha" required value="<?php echo !empty($datausaha)?$datausaha->nama_usaha:''?>">
+                    <input type="text" class="form-control" name="nama_usaha" id="" placeholder="Nama Usaha" required value="<?php echo !empty($datausaha)?$usaha->nama_usaha:''?>">
                 </div>
                 <div class="form-group">
                     <label for="">Kecamatan</label>

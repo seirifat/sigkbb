@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b15abb55-a7f5-45bd-a586-00b0c04d70a4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/userdetil.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/sektorusaha.php" afterPath="$PROJECT_DIR$/application/controllers/admin/sektorusaha.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/sektorusaha.php" afterPath="$PROJECT_DIR$/application/views/admin/sektorusaha.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/sektorusaha_add.php" afterPath="$PROJECT_DIR$/application/views/admin/sektorusaha_add.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/skalausaha.php" afterPath="$PROJECT_DIR$/application/views/admin/skalausaha.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/skalausaha_add.php" afterPath="$PROJECT_DIR$/application/views/admin/skalausaha_add.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/user.php" afterPath="$PROJECT_DIR$/application/controllers/admin/user.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/datausaha.php" afterPath="$PROJECT_DIR$/application/controllers/admin/datausaha.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/datausaha_add.php" afterPath="$PROJECT_DIR$/application/views/admin/datausaha_add.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/datausahadetil.php" afterPath="$PROJECT_DIR$/application/views/admin/datausahadetil.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/m_datausaha.php" afterPath="$PROJECT_DIR$/application/models/m_datausaha.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="sigkbb.iws" />
@@ -36,65 +31,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/user.php">
+      <file leaf-file-name="datausaha.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/datausaha.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1309">
-              <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="33" />
+            <state vertical-scroll-proportion="-15.692307" vertical-offset="697" max-vertical-offset="1581">
+              <caret line="65" column="138" selection-start-line="65" selection-start-column="138" selection-end-line="65" selection-end-column="138" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user_add.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/user_add.php">
+      <file leaf-file-name="datausaha_add.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/datausaha_add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.038462" vertical-offset="621" max-vertical-offset="1785">
-              <caret line="84" column="72" selection-start-line="84" selection-start-column="72" selection-end-line="84" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.32246378" vertical-offset="3171" max-vertical-offset="4709">
+              <caret line="197" column="68" selection-start-line="197" selection-start-column="68" selection-end-line="197" selection-end-column="68" />
+              <folding>
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datausaha.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/admin/datausaha.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-33.653847" vertical-offset="1267" max-vertical-offset="3485">
+              <caret line="128" column="33" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
+              <folding>
+                <element signature="e#176#609#0#PHP" expanded="true" />
+                <element signature="e#615#1615#0#PHP" expanded="true" />
+                <element signature="e#1706#3232#0#PHP" expanded="true" />
+                <element signature="e#3237#3655#0#PHP" expanded="true" />
+                <element signature="e#3670#3865#0#PHP" expanded="true" />
+                <element signature="e#5477#6059#0#PHP" expanded="true" />
+                <element signature="e#6065#6608#0#PHP" expanded="true" />
+                <element signature="e#6614#7048#0#PHP" expanded="true" />
+                <marker date="1435721053491" expanded="false" signature="8497:8507" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m_datausaha.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/models/m_datausaha.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="833">
+              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+              <folding>
+                <element signature="e#789#1004#0#PHP" expanded="true" />
+                <element signature="e#1009#1228#0#PHP" expanded="true" />
+                <element signature="e#1234#1494#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datausahadetil.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/datausahadetil.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231" vertical-offset="799" max-vertical-offset="2244">
+              <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="m_user.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/m_user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="3.7692308" vertical-offset="200" max-vertical-offset="765">
-              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-              <folding>
-                <element signature="e#502#709#0#PHP" expanded="true" />
-                <element signature="e#714#926#0#PHP" expanded="true" />
-                <element signature="e#931#1182#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/admin/user.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.807692" vertical-offset="1322" max-vertical-offset="2040">
-              <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
-              <folding>
-                <element signature="e#160#325#0#PHP" expanded="true" />
-                <element signature="e#331#621#0#PHP" expanded="true" />
-                <element signature="e#626#1965#0#PHP" expanded="true" />
-                <element signature="e#1970#2210#0#PHP" expanded="true" />
-                <element signature="e#2216#4039#0#PHP" expanded="true" />
-                <element signature="e#4044#4451#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userdetil.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/userdetil.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49275362" vertical-offset="51" max-vertical-offset="1972">
-              <caret line="19" column="86" selection-start-line="19" selection-start-column="86" selection-end-line="19" selection-end-column="86" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -144,10 +142,6 @@
         <option value="$PROJECT_DIR$/application/views/admin/user_add.php" />
         <option value="$PROJECT_DIR$/application/views/admin/datausaha.php" />
         <option value="$PROJECT_DIR$/application/views/admin/components/header.php" />
-        <option value="$PROJECT_DIR$/application/models/m_datausaha.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/datausaha.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/datausaha_add.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/datausahadetil.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/models/m_sektorusaha.php" />
@@ -158,6 +152,10 @@
         <option value="$PROJECT_DIR$/application/views/admin/skalausaha_add.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/user.php" />
         <option value="$PROJECT_DIR$/application/views/admin/userdetil.php" />
+        <option value="$PROJECT_DIR$/application/models/m_datausaha.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/datausahadetil.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/datausaha.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/datausaha_add.php" />
       </list>
     </option>
   </component>
@@ -209,20 +207,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sigkbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sigkbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sigkbb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -412,7 +396,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -478,13 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/m_kecamatan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31954888" vertical-offset="0" max-vertical-offset="782">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/skalausaha.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21441442" vertical-offset="0" max-vertical-offset="663">
@@ -535,13 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18053098" vertical-offset="0" max-vertical-offset="565">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/kecamatan_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52355075" vertical-offset="0" max-vertical-offset="663">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -676,32 +646,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/m_datausaha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.884615" vertical-offset="302" max-vertical-offset="1173">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="35" />
-          <folding>
-            <element signature="e#118#382#0#PHP" expanded="false" />
-            <element signature="e#388#782#0#PHP" expanded="false" />
-            <element signature="e#789#1004#0#PHP" expanded="false" />
-            <element signature="e#1009#1228#0#PHP" expanded="false" />
-            <element signature="e#1233#1493#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Downloads/Compressed/jQuery-Geocoding-Places-Autocomplete-with-Google-Maps-API-geocomplete/jQuery-Geocoding-Places-Autocomplete-with-Google-Maps-API-geocomplete/examples/api.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.461538" vertical-offset="153" max-vertical-offset="935">
           <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/datausaha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-39.884617" vertical-offset="0" max-vertical-offset="1581">
-          <caret line="61" column="93" selection-start-line="61" selection-start-column="93" selection-end-line="61" selection-end-column="93" />
           <folding />
         </state>
       </provider>
@@ -730,17 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/datausahadetil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307" vertical-offset="0" max-vertical-offset="2023">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5415929" vertical-offset="612" max-vertical-offset="2057">
@@ -753,47 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1061947" vertical-offset="55" max-vertical-offset="901">
           <caret line="40" column="38" selection-start-line="40" selection-start-column="38" selection-end-line="40" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/kecamatan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7522124" vertical-offset="0" max-vertical-offset="1751">
-          <caret line="25" column="46" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-          <folding>
-            <element signature="e#165#369#0#PHP" expanded="true" />
-            <element signature="e#1367#1445#0#PHP" expanded="true" />
-            <element signature="e#1448#1982#0#PHP" expanded="true" />
-            <element signature="e#1987#2228#0#PHP" expanded="true" />
-            <element signature="e#2234#2866#0#PHP" expanded="true" />
-            <marker date="1434672002685" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/datausaha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12035398" vertical-offset="2907" max-vertical-offset="3502">
-          <caret line="177" column="72" selection-start-line="177" selection-start-column="72" selection-end-line="177" selection-end-column="72" />
-          <folding>
-            <element signature="e#176#609#0#PHP" expanded="true" />
-            <element signature="e#615#1615#0#PHP" expanded="true" />
-            <element signature="e#1706#3232#0#PHP" expanded="true" />
-            <element signature="e#3237#3655#0#PHP" expanded="true" />
-            <element signature="e#3670#3865#0#PHP" expanded="true" />
-            <element signature="e#3871#5562#0#PHP" expanded="true" />
-            <element signature="e#5568#6150#0#PHP" expanded="true" />
-            <element signature="e#6705#7096#0#PHP" expanded="true" />
-            <marker date="1435658707799" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/datausaha_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36956522" vertical-offset="1530" max-vertical-offset="4709">
-          <caret line="102" column="58" selection-start-line="102" selection-start-column="58" selection-end-line="102" selection-end-column="58" />
           <folding />
         </state>
       </provider>
@@ -814,104 +710,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/sektorusaha.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/userdetil.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33097345" vertical-offset="0" max-vertical-offset="1615">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.49275362" vertical-offset="51" max-vertical-offset="1972">
+          <caret line="19" column="86" selection-start-line="19" selection-start-column="86" selection-end-line="19" selection-end-column="86" />
           <folding>
-            <element signature="e#167#329#0#PHP" expanded="true" />
-            <element signature="e#335#677#0#PHP" expanded="true" />
-            <element signature="e#682#1220#0#PHP" expanded="true" />
-            <element signature="e#1225#1474#0#PHP" expanded="true" />
-            <element signature="e#1480#2116#0#PHP" expanded="true" />
-            <element signature="e#2121#2559#0#PHP" expanded="true" />
-            <element signature="e#2565#3112#0#PHP" expanded="true" />
-            <element signature="e#3117#3234#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/m_sektorusaha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66902655" vertical-offset="574" max-vertical-offset="1139">
-          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
-          <folding>
-            <element signature="e#120#386#0#PHP" expanded="true" />
-            <element signature="e#391#604#0#PHP" expanded="true" />
-            <element signature="e#609#831#0#PHP" expanded="true" />
-            <element signature="e#836#1210#0#PHP" expanded="true" />
-            <element signature="e#1215#1458#0#PHP" expanded="true" />
-            <element signature="e#1463#1580#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/sektorusaha.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56884056" vertical-offset="672" max-vertical-offset="1224">
-          <caret line="58" column="38" selection-start-line="58" selection-start-column="38" selection-end-line="58" selection-end-column="38" />
-          <folding>
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435676973145" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/sektorusaha_add.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0471015" vertical-offset="0" max-vertical-offset="782">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.807692" vertical-offset="1322" max-vertical-offset="2040">
+        <state vertical-scroll-proportion="0.81946903" vertical-offset="1322" max-vertical-offset="2040">
           <caret line="120" column="21" selection-start-line="120" selection-start-column="21" selection-end-line="120" selection-end-column="21" />
           <folding>
-            <element signature="e#160#325#0#PHP" expanded="true" />
-            <element signature="e#331#621#0#PHP" expanded="true" />
-            <element signature="e#626#1965#0#PHP" expanded="true" />
-            <element signature="e#1970#2210#0#PHP" expanded="true" />
-            <element signature="e#2216#4039#0#PHP" expanded="true" />
-            <element signature="e#4044#4451#0#PHP" expanded="true" />
+            <element signature="e#160#325#0#PHP" expanded="false" />
+            <element signature="e#331#621#0#PHP" expanded="false" />
+            <element signature="e#626#1965#0#PHP" expanded="false" />
+            <element signature="e#1970#2210#0#PHP" expanded="false" />
+            <element signature="e#2216#4039#0#PHP" expanded="false" />
+            <element signature="e#4044#4451#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/m_user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.7692308" vertical-offset="200" max-vertical-offset="765">
+        <state vertical-scroll-proportion="-0.17345133" vertical-offset="200" max-vertical-offset="765">
           <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding>
-            <element signature="e#502#709#0#PHP" expanded="true" />
-            <element signature="e#714#926#0#PHP" expanded="true" />
-            <element signature="e#931#1182#0#PHP" expanded="true" />
+            <element signature="e#502#709#0#PHP" expanded="false" />
+            <element signature="e#714#926#0#PHP" expanded="false" />
+            <element signature="e#931#1182#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/user_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.038462" vertical-offset="621" max-vertical-offset="1785">
+        <state vertical-scroll-proportion="1.4619565" vertical-offset="621" max-vertical-offset="1785">
           <caret line="84" column="72" selection-start-line="84" selection-start-column="72" selection-end-line="84" selection-end-column="72" />
           <folding />
         </state>
@@ -919,18 +757,141 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/user.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="1309">
+        <state vertical-scroll-proportion="0.030797102" vertical-offset="0" max-vertical-offset="1309">
           <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/userdetil.php">
+    <entry file="file://$PROJECT_DIR$/application/views/admin/kecamatan_add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49275362" vertical-offset="51" max-vertical-offset="1972">
-          <caret line="19" column="86" selection-start-line="19" selection-start-column="86" selection-end-line="19" selection-end-column="86" />
+        <state vertical-scroll-proportion="-7.1923075" vertical-offset="0" max-vertical-offset="663">
+          <caret line="11" column="90" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/kecamatan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3380531" vertical-offset="1288" max-vertical-offset="1904">
+          <caret line="87" column="47" selection-start-line="87" selection-start-column="37" selection-end-line="87" selection-end-column="47" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#165#369#0#PHP" expanded="true" />
+            <element signature="e#372#1360#0#PHP" expanded="true" />
+            <element signature="e#1367#1445#0#PHP" expanded="true" />
+            <element signature="e#1448#1982#0#PHP" expanded="true" />
+            <element signature="e#1987#2228#0#PHP" expanded="true" />
+            <element signature="e#2234#2866#0#PHP" expanded="true" />
+            <marker date="1434672002685" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/m_kecamatan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7221239" vertical-offset="0" max-vertical-offset="680">
+          <caret line="45" column="37" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="37" />
+          <folding>
+            <element signature="e#118#381#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/m_sektorusaha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18053098" vertical-offset="0" max-vertical-offset="646">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="35" />
+          <folding>
+            <element signature="e#609#831#0#PHP" expanded="false" />
+            <element signature="e#836#1210#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/sektorusaha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6619469" vertical-offset="663" max-vertical-offset="1615">
+          <caret line="61" column="53" selection-start-line="61" selection-start-column="50" selection-end-line="61" selection-end-column="53" />
+          <folding>
+            <element signature="e#167#329#0#PHP" expanded="true" />
+            <element signature="e#335#677#0#PHP" expanded="true" />
+            <element signature="e#682#1220#0#PHP" expanded="true" />
+            <element signature="e#1225#1474#0#PHP" expanded="true" />
+            <element signature="e#1480#2116#0#PHP" expanded="true" />
+            <element signature="e#2565#3112#0#PHP" expanded="true" />
+            <element signature="e#3117#3234#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/sektorusaha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9384058" vertical-offset="553" max-vertical-offset="1224">
+          <caret line="63" column="18" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/sektorusaha_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1539855" vertical-offset="0" max-vertical-offset="782">
+          <caret line="5" column="100" selection-start-line="5" selection-start-column="100" selection-end-line="5" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/datausahadetil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231" vertical-offset="799" max-vertical-offset="2244">
+          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/m_datausaha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="833">
+          <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+          <folding>
+            <element signature="e#789#1004#0#PHP" expanded="true" />
+            <element signature="e#1009#1228#0#PHP" expanded="true" />
+            <element signature="e#1234#1494#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/datausaha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-33.653847" vertical-offset="1267" max-vertical-offset="3485">
+          <caret line="128" column="33" selection-start-line="128" selection-start-column="33" selection-end-line="128" selection-end-column="33" />
+          <folding>
+            <element signature="e#176#609#0#PHP" expanded="true" />
+            <element signature="e#615#1615#0#PHP" expanded="true" />
+            <element signature="e#1706#3232#0#PHP" expanded="true" />
+            <element signature="e#3237#3655#0#PHP" expanded="true" />
+            <element signature="e#3670#3865#0#PHP" expanded="true" />
+            <element signature="e#5477#6059#0#PHP" expanded="true" />
+            <element signature="e#6065#6608#0#PHP" expanded="true" />
+            <element signature="e#6614#7048#0#PHP" expanded="true" />
+            <marker date="1435721053491" expanded="false" signature="8497:8507" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/datausaha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.692307" vertical-offset="697" max-vertical-offset="1581">
+          <caret line="65" column="138" selection-start-line="65" selection-start-column="138" selection-end-line="65" selection-end-column="138" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/datausaha_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32246378" vertical-offset="3171" max-vertical-offset="4709">
+          <caret line="197" column="68" selection-start-line="197" selection-start-column="68" selection-end-line="197" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
