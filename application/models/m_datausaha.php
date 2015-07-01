@@ -7,7 +7,9 @@ class M_datausaha extends CI_Model {
         //$query = $this->db->query('join na didieu);
         //$data = $query->result();
         $this->db->select('*');
-        $this->db->from('data_usaha');
+        $this->db->from('data_usaha as du');
+        $this->db->join('user as usr','du.id_user = usr.id_user');
+        $this->db->join('sektor_usaha as su','du.id_sektor = su.id_sektor');
         $data = $this->db->get()->result();
         return $data;
     }
@@ -17,7 +19,9 @@ class M_datausaha extends CI_Model {
         //$query = $this->db->query('join na didieu);
         //$data = $query->result();
         $this->db->select('*');
-        $this->db->from('data_usaha');
+        $this->db->from('data_usaha as du');
+        $this->db->join('user as usr','du.id_user = usr.id_user');
+        $this->db->join('sektor_usaha as su','du.id_sektor = su.id_sektor');
 
         if($limit != null){
             $this->db->limit($limit['perpage'], $limit['offset']);

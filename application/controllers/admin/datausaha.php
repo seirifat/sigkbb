@@ -18,6 +18,8 @@ class Datausaha extends CI_Controller {
 
     public function index($offset = 0)
     {
+        //var_dump($this->usa->readall());die;
+
         $perpage = 7;
 
         //konfig dasar pagination
