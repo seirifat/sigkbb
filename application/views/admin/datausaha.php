@@ -59,8 +59,8 @@
                                         <tr>
                                             <td class="text-center"><?php echo $i;?></td>
                                             <td class="text-center"><?php echo $row->nama_usaha;?></td>
-                                            <td class="text-center"><?php echo $row->id_user;?></td>
-                                            <td class="text-center"><?php echo $row->id_sektor;?></td>
+                                            <td class="text-center"><?php echo $row->nama_user;?></td>
+                                            <td class="text-center"><?php echo $row->nama_sektor;?></td>
                                             <td class="text-center"><?php echo $row->produk;?></td>
                                             <td class="text-center">
                                                 <a href="<?php echo base_url('admin/datausaha/detilview/'.$row->id_usaha);?>" class="btn btn-info"><i class="fa fa-list"></i></a>
