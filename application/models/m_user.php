@@ -12,6 +12,14 @@ class M_user extends CI_Model {
         $data = $this->db->get()->result();
         return $data;
     }
+    
+    public function getUserPemilik(){
+		$this->db->select('*');
+        $this->db->from('user');
+        $this->db->where('status_user','pemilikusaha');
+        $data = $this->db->get()->result();
+        return $data;
+	}
 
     public function add($datauser)
     {
