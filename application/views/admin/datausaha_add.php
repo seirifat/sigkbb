@@ -79,7 +79,7 @@
 <div class="container-fluid">
     <div class="row">
 
-            <form action="<?php echo !empty($edit)? base_url('admin/datausaha/edit/'.$usaha->id_usaha): base_url('admin/datausaha/add'); ?>" method="post" role="form">
+            <form name="theForm" onsubmit="return validasiForm()" action="<?php echo !empty($edit)? base_url('admin/datausaha/edit/'.$usaha->id_usaha): base_url('admin/datausaha/add'); ?>" method="post" role="form">
                 <legend><?php echo !empty($edit)?"Edit Data Usaha":"Tambah Data Usaha";?></legend>
 		<div class="col-md-3">		
                 <div class="form-group">
@@ -106,7 +106,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Sektor Usaha</label>
-                    <select name="id_sektor" id="inputID" class="form-control">
+                    <select name="id_sektor" id="id_sektor" class="form-control">
                         <option value="" disabled selected> -- Pilih Sektor Usaha--</option>
                         <?php foreach($sektorusaha as $row):?>
                             <option value="<?php echo $row->id_sektor;?>"><?php echo $row->nama_sektor;?></option>
@@ -115,7 +115,7 @@
                 </div>
                 <div class="form-group">
                     <label for="">Skala Usaha</label>
-                    <select name="id_skalausahan" id="inputID" class="form-control">
+                    <select name="id_skalausaha" id="id_skalausaha" class="form-control">
                         <option value="" disabled selected> -- Pilih Sakal Usaha --</option>
                         <?php foreach($skalausaha as $row):?>
                             <option value="<?php echo $row->id_skalausaha;?>"><?php echo $row->nama_skalausaha;?></option>
@@ -124,13 +124,18 @@
                 </div>
                 <div class="form-group">
                     <label for="">Omzet</label>
-                    <input type="text" class="form-control" name="omzet" id="" placeholder="Rp." required value="<?php echo !empty($datausaha)?$datausaha->omzet:''?>">
+                    <input onkeyup="chkOmzet(this)" type="text" class="form-control" name="omzet" id="omzet" placeholder="Rp." required value="<?php echo !empty($datausaha)?$datausaha->omzet:''?>">
                 </div>
         </div>
         <div class="col-md-3">
                 <div class="form-group">
                     <label for="">Nama Pemilik</label>
-                    <input type="text" class="form-control" name="id_user" id="" placeholder="Pemilik Usaha" required value="<?php echo !empty($datausaha)?$datausaha->id_user:''?>">
+                    <select name="id_user" id="id_user" class="form-control">
+                        <option value="" disabled selected> -- Pilih Pemilik Usaha --</option>
+                        <?php foreach($user as $row):?>
+                            <option value="<?php echo $row->id_user;?>"><?php echo $row->nama_user;?></option>
+                        <?php endforeach;?>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="">Produk</label>
@@ -154,11 +159,10 @@
                 </div>
                 <div class="form-group">
                     <label for="">No Telp</label>
-                    <input type="text" class="form-control" name="no_telp" id="" placeholder="No Telp" required
+                    <input onkeyup="chkTelp(this)" type="text" class="form-control" name="no_tlp" id="no_tlp" placeholder="No Telp" required
                            value="<?php echo !empty($datausaha)?$datausaha->no_tlp:''?>">
                 </div>
         </div>
-         </form>
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
@@ -195,9 +199,12 @@
         </div>
         <div class="col-lg-3"></div>
         <div class="form-group text-right col-lg-3" style="margin-top: 40px">
-            <button type="submit" class="btn btn-primary btn-block">Simpan</button>
+            <button type="submit"  class="btn btn-primary btn-block">Simpan</button>
         </div>
     </div>
+    
+    
+    </form>
 </div>
                 <br>
                 <br>
@@ -213,6 +220,51 @@
         </div>
 
 <script>
+	
+	function chkTelp(nomor){	
+		if(isNaN(nomor.value)){
+			$('#no_tlp').val(0);
+		}
+	}
+	function chkOmzet(nomor){	
+		if(isNaN(nomor.value)){
+			$('#omzet').val(0);
+		}
+	}
+
+	function validasiForm(){
+		
+		var id_kec = $('#id_kecamatan').val();
+		var id_kel = $('#id_kelurahan').val();
+		var id_sek = $('#id_sektor').val();
+		var id_skl = $('#id_skalausaha').val();
+		var id_usr = $('#id_user').val();
+		
+		//alert(id_kec+id_kel+id_sek+id_skl);
+		
+		if(id_kec == "" || id_kec == null){
+			alert("Kecamatan Harus dipilih!");
+			return false;
+		}
+		else if(id_kel == "" || id_kel == null){
+			alert("Kelurahan Harus dipilih!");
+			return false;
+		}
+		else if(id_sek == "" || id_sek == null){
+			alert("Sektor usaha Harus dipilih!");
+			return false;
+		}
+		else if(id_skl == "" || id_skl == null){
+			alert("Skala usaha Harus dipilih!");
+			return false;
+		}
+		else if(id_usr == "" || id_usr == null){
+			alert("Pemilik usaha Harus dipilih!");
+			return false;
+		}
+	}
+	
+
 	$('#us2').locationpicker({
 	    location: {latitude: -6.8162073, longitude: 107.62279609999996},
 	    radius: 550,
@@ -224,9 +276,7 @@
 	    },
 	    enableAutocomplete: true
 	});
-</script>
-
-<script>
+	
 	$('#id_kecamatan').change(function(){
 		var id_kec = $('#id_kecamatan').val();
 		$.ajax({

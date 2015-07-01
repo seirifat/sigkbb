@@ -14,6 +14,7 @@ class Datausaha extends CI_Controller {
         $this->load->model('M_kelurahan','kel',true);
         $this->load->model('M_sektorusaha','sek',true);
         $this->load->model('M_skalausaha','ska',true);
+        $this->load->model('M_user','usr',true);
     }
 
     public function index($offset = 0)
@@ -80,7 +81,7 @@ class Datausaha extends CI_Controller {
         $data['latitude'] = $la;
         $data['longitude'] = $lo;
         $data['omzet'] = $omzet;
-        $data['no_telp'] = $telp;
+        $data['no_tlp'] = $telp;
 
         // NOTIFICATION
         if($this->usa->add($data)){
@@ -98,6 +99,7 @@ class Datausaha extends CI_Controller {
         $data['sektorusaha'] = $this->sek->readall();
         $data['skalausaha'] = $this->ska->readall();
         $data['kecamatan'] = $this->kec->readall();
+        $data['user'] = $this->usr->getUserPemilik();
         $this->load->view('admin/components/header',$this->judul);
         $this->load->view('admin/datausaha_add',$data);
         $this->load->view('admin/components/footer');
